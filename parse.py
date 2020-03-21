@@ -1,11 +1,15 @@
 from bs4 import BeautifulSoup
+import requests
+from lxml import html
 
-with open("index.html", "r") as f:
 
-    contents = f.read()
 
-    soup = BeautifulSoup(contents, 'lxml')
 
-    print(soup.h2)
-    print(soup.head)
-    print(soup.li)
+page = requests.get('http://econpy.pythonanywhere.com/ex/001.html')
+
+contents = page.content
+
+
+soup = BeautifulSoup(contents, 'lxml')
+
+print(soup.head)
