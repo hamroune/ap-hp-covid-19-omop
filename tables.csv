@@ -1,0 +1,392 @@
+Table,Column,Type,Size,Nulls,Auto,Default
+attribute_definition,attribute_definition_id,int4,10,,,
+attribute_definition,attribute_description,text,2147483647, √ ,,null
+attribute_definition,attribute_name,varchar,255,,,
+attribute_definition,attribute_syntax,text,2147483647, √ ,,null
+attribute_definition,attribute_type_concept_id,int4,10,,,
+care_site,care_site_id,int4,10,,,
+care_site,care_site_name,varchar,255, √ ,,null
+care_site,care_site_source_value,varchar,50, √ ,,null
+care_site,location_id,int4,10, √ ,,null
+care_site,place_of_service_concept_id,int4,10, √ ,,null
+care_site,place_of_service_source_value,varchar,50, √ ,,null
+cdm_source,cdm_etl_reference,varchar,255, √ ,,null
+cdm_source,cdm_holder,varchar,255, √ ,,null
+cdm_source,cdm_release_date,date,13, √ ,,null
+cdm_source,cdm_source_abbreviation,varchar,25, √ ,,null
+cdm_source,cdm_source_name,varchar,255,,,
+cdm_source,cdm_version,varchar,10, √ ,,null
+cdm_source,source_description,text,2147483647, √ ,,null
+cdm_source,source_documentation_reference,varchar,255, √ ,,null
+cdm_source,source_release_date,date,13, √ ,,null
+cdm_source,vocabulary_version,varchar,20, √ ,,null
+cohort,cohort_definition_id,int4,10,,,
+cohort,cohort_end_date,date,13,,,
+cohort,cohort_start_date,date,13,,,
+cohort,subject_id,int4,10,,,
+cohort_attribute,attribute_definition_id,int4,10,,,
+cohort_attribute,cohort_definition_id,int4,10,,,
+cohort_attribute,cohort_end_date,date,13,,,
+cohort_attribute,cohort_start_date,date,13,,,
+cohort_attribute,subject_id,int4,10,,,
+cohort_attribute,value_as_concept_id,int4,10, √ ,,null
+cohort_attribute,value_as_number,numeric,131089, √ ,,null
+cohort_definition,cohort_definition_description,text,2147483647, √ ,,null
+cohort_definition,cohort_definition_id,int4,10,,,
+cohort_definition,cohort_definition_name,varchar,255,,,
+cohort_definition,cohort_definition_syntax,text,2147483647, √ ,,null
+cohort_definition,cohort_initiation_date,date,13, √ ,,null
+cohort_definition,definition_type_concept_id,int4,10,,,
+cohort_definition,subject_concept_id,int4,10,,,
+concept,concept_class_id,varchar,20,,,
+concept,concept_code,varchar,50,,,
+concept,concept_id,int4,10,,,
+concept,concept_name,varchar,255,,,
+concept,domain_id,varchar,20,,,
+concept,invalid_reason,varchar,1, √ ,,null
+concept,standard_concept,varchar,1, √ ,,null
+concept,valid_end_date,date,13,,,
+concept,valid_start_date,date,13,,,
+concept,vocabulary_id,varchar,20,,,
+concept_ancestor,ancestor_concept_id,int4,10,,,
+concept_ancestor,descendant_concept_id,int4,10,,,
+concept_ancestor,max_levels_of_separation,int4,10,,,
+concept_ancestor,min_levels_of_separation,int4,10,,,
+concept_class,concept_class_concept_id,int4,10,,,
+concept_class,concept_class_id,varchar,20,,,
+concept_class,concept_class_name,varchar,255,,,
+concept_relationship,concept_id_1,int4,10,,,
+concept_relationship,concept_id_2,int4,10,,,
+concept_relationship,invalid_reason,varchar,1, √ ,,null
+concept_relationship,relationship_id,varchar,20,,,
+concept_relationship,valid_end_date,date,13,,,
+concept_relationship,valid_start_date,date,13,,,
+concept_synonym,concept_id,int4,10,,,
+concept_synonym,concept_synonym_name,varchar,1000,,,
+concept_synonym,language_concept_id,int4,10,,,
+condition_era,condition_concept_id,int4,10,,,
+condition_era,condition_era_end_date,date,13,,,
+condition_era,condition_era_id,int4,10,,,
+condition_era,condition_era_start_date,date,13,,,
+condition_era,condition_occurrence_count,int4,10, √ ,,null
+condition_era,person_id,int4,10,,,
+condition_occurrence,condition_concept_id,int4,10,,,
+condition_occurrence,condition_end_date,date,13, √ ,,null
+condition_occurrence,condition_end_datetime,timestamp,"29,6", √ ,,null
+condition_occurrence,condition_occurrence_id,int4,10,,,
+condition_occurrence,condition_source_concept_id,int4,10, √ ,,null
+condition_occurrence,condition_source_value,varchar,50, √ ,,null
+condition_occurrence,condition_start_date,date,13,,,
+condition_occurrence,condition_start_datetime,timestamp,"29,6",,,
+condition_occurrence,condition_status_concept_id,int4,10, √ ,,null
+condition_occurrence,condition_status_source_value,varchar,50, √ ,,null
+condition_occurrence,condition_type_concept_id,int4,10,,,
+condition_occurrence,person_id,int4,10,,,
+condition_occurrence,provider_id,int4,10, √ ,,null
+condition_occurrence,stop_reason,varchar,20, √ ,,null
+condition_occurrence,visit_detail_id,int4,10, √ ,,null
+condition_occurrence,visit_occurrence_id,int4,10, √ ,,null
+cost,amount_allowed,numeric,131089, √ ,,null
+cost,cost_domain_id,varchar,20,,,
+cost,cost_event_id,int4,10,,,
+cost,cost_id,int4,10,,,
+cost,cost_type_concept_id,int4,10,,,
+cost,currency_concept_id,int4,10, √ ,,null
+cost,drg_concept_id,int4,10, √ ,,null
+cost,drg_source_value,varchar,3, √ ,,null
+cost,paid_by_patient,numeric,131089, √ ,,null
+cost,paid_by_payer,numeric,131089, √ ,,null
+cost,paid_by_primary,numeric,131089, √ ,,null
+cost,paid_dispensing_fee,numeric,131089, √ ,,null
+cost,paid_ingredient_cost,numeric,131089, √ ,,null
+cost,paid_patient_coinsurance,numeric,131089, √ ,,null
+cost,paid_patient_copay,numeric,131089, √ ,,null
+cost,paid_patient_deductible,numeric,131089, √ ,,null
+cost,payer_plan_period_id,int4,10, √ ,,null
+cost,revenue_code_concept_id,int4,10, √ ,,null
+cost,revenue_code_source_value,varchar,50, √ ,,null
+cost,total_charge,numeric,131089, √ ,,null
+cost,total_cost,numeric,131089, √ ,,null
+cost,total_paid,numeric,131089, √ ,,null
+death,cause_concept_id,int4,10, √ ,,null
+death,cause_source_concept_id,int4,10, √ ,,null
+death,cause_source_value,varchar,50, √ ,,null
+death,death_date,date,13,,,
+death,death_datetime,timestamp,"29,6", √ ,,null
+death,death_type_concept_id,int4,10,,,
+death,person_id,int4,10,,,
+device_exposure,device_concept_id,int4,10,,,
+device_exposure,device_exposure_end_date,date,13, √ ,,null
+device_exposure,device_exposure_end_datetime,timestamp,"29,6", √ ,,null
+device_exposure,device_exposure_id,int4,10,,,
+device_exposure,device_exposure_start_date,date,13,,,
+device_exposure,device_exposure_start_datetime,timestamp,"29,6",,,
+device_exposure,device_source_concept_id,int4,10, √ ,,null
+device_exposure,device_source_value,varchar,100, √ ,,null
+device_exposure,device_type_concept_id,int4,10,,,
+device_exposure,person_id,int4,10,,,
+device_exposure,provider_id,int4,10, √ ,,null
+device_exposure,quantity,int4,10, √ ,,null
+device_exposure,unique_device_id,varchar,50, √ ,,null
+device_exposure,visit_detail_id,int4,10, √ ,,null
+device_exposure,visit_occurrence_id,int4,10, √ ,,null
+domain,domain_concept_id,int4,10,,,
+domain,domain_id,varchar,20,,,
+domain,domain_name,varchar,255,,,
+dose_era,dose_era_end_date,date,13,,,
+dose_era,dose_era_id,int4,10,,,
+dose_era,dose_era_start_date,date,13,,,
+dose_era,dose_value,numeric,131089,,,
+dose_era,drug_concept_id,int4,10,,,
+dose_era,person_id,int4,10,,,
+dose_era,unit_concept_id,int4,10,,,
+drug_era,drug_concept_id,int4,10,,,
+drug_era,drug_era_end_date,date,13,,,
+drug_era,drug_era_id,int4,10,,,
+drug_era,drug_era_start_date,date,13,,,
+drug_era,drug_exposure_count,int4,10, √ ,,null
+drug_era,gap_days,int4,10, √ ,,null
+drug_era,person_id,int4,10,,,
+drug_exposure,days_supply,int4,10, √ ,,null
+drug_exposure,dose_unit_source_value,varchar,50, √ ,,null
+drug_exposure,drug_concept_id,int4,10,,,
+drug_exposure,drug_exposure_end_date,date,13,,,
+drug_exposure,drug_exposure_end_datetime,timestamp,"29,6", √ ,,null
+drug_exposure,drug_exposure_id,int4,10,,,
+drug_exposure,drug_exposure_start_date,date,13,,,
+drug_exposure,drug_exposure_start_datetime,timestamp,"29,6",,,
+drug_exposure,drug_source_concept_id,int4,10, √ ,,null
+drug_exposure,drug_source_value,varchar,50, √ ,,null
+drug_exposure,drug_type_concept_id,int4,10,,,
+drug_exposure,lot_number,varchar,50, √ ,,null
+drug_exposure,person_id,int4,10,,,
+drug_exposure,provider_id,int4,10, √ ,,null
+drug_exposure,quantity,numeric,131089, √ ,,null
+drug_exposure,refills,int4,10, √ ,,null
+drug_exposure,route_concept_id,int4,10, √ ,,null
+drug_exposure,route_source_value,varchar,50, √ ,,null
+drug_exposure,sig,text,2147483647, √ ,,null
+drug_exposure,stop_reason,varchar,20, √ ,,null
+drug_exposure,verbatim_end_date,date,13, √ ,,null
+drug_exposure,visit_detail_id,int4,10, √ ,,null
+drug_exposure,visit_occurrence_id,int4,10, √ ,,null
+drug_strength,amount_unit_concept_id,int4,10, √ ,,null
+drug_strength,amount_value,numeric,131089, √ ,,null
+drug_strength,box_size,int4,10, √ ,,null
+drug_strength,denominator_unit_concept_id,int4,10, √ ,,null
+drug_strength,denominator_value,numeric,131089, √ ,,null
+drug_strength,drug_concept_id,int4,10,,,
+drug_strength,ingredient_concept_id,int4,10,,,
+drug_strength,invalid_reason,varchar,1, √ ,,null
+drug_strength,numerator_unit_concept_id,int4,10, √ ,,null
+drug_strength,numerator_value,numeric,131089, √ ,,null
+drug_strength,valid_end_date,date,13,,,
+drug_strength,valid_start_date,date,13,,,
+fact_relationship,domain_concept_id_1,int4,10,,,
+fact_relationship,domain_concept_id_2,int4,10,,,
+fact_relationship,fact_id_1,int4,10,,,
+fact_relationship,fact_id_2,int4,10,,,
+fact_relationship,relationship_concept_id,int4,10,,,
+location,address_1,varchar,50, √ ,,null
+location,address_2,varchar,50, √ ,,null
+location,city,varchar,50, √ ,,null
+location,county,varchar,20, √ ,,null
+location,location_id,int4,10,,,
+location,location_source_value,varchar,50, √ ,,null
+location,state,varchar,2, √ ,,null
+location,zip,varchar,9, √ ,,null
+measurement,measurement_concept_id,int4,10,,,
+measurement,measurement_date,date,13,,,
+measurement,measurement_datetime,timestamp,"29,6", √ ,,null
+measurement,measurement_id,int4,10,,,
+measurement,measurement_source_concept_id,int4,10, √ ,,null
+measurement,measurement_source_value,varchar,50, √ ,,null
+measurement,measurement_type_concept_id,int4,10,,,
+measurement,operator_concept_id,int4,10, √ ,,null
+measurement,person_id,int4,10,,,
+measurement,provider_id,int4,10, √ ,,null
+measurement,range_high,numeric,131089, √ ,,null
+measurement,range_low,numeric,131089, √ ,,null
+measurement,unit_concept_id,int4,10, √ ,,null
+measurement,unit_source_value,varchar,50, √ ,,null
+measurement,value_as_concept_id,int4,10, √ ,,null
+measurement,value_as_number,numeric,131089, √ ,,null
+measurement,value_source_value,varchar,50, √ ,,null
+measurement,visit_detail_id,int4,10, √ ,,null
+measurement,visit_occurrence_id,int4,10, √ ,,null
+note,encoding_concept_id,int4,10,,,
+note,language_concept_id,int4,10,,,
+note,note_class_concept_id,int4,10,,,
+note,note_date,date,13,,,
+note,note_datetime,timestamp,"29,6", √ ,,null
+note,note_id,int4,10,,,
+note,note_source_value,varchar,50, √ ,,null
+note,note_text,text,2147483647,,,
+note,note_title,varchar,250, √ ,,null
+note,note_type_concept_id,int4,10,,,
+note,person_id,int4,10,,,
+note,provider_id,int4,10, √ ,,null
+note,visit_detail_id,int4,10, √ ,,null
+note,visit_occurrence_id,int4,10, √ ,,null
+note_nlp,lexical_variant,varchar,250,,,
+note_nlp,nlp_date,date,13,,,
+note_nlp,nlp_datetime,timestamp,"29,6", √ ,,null
+note_nlp,nlp_system,varchar,250, √ ,,null
+note_nlp,note_id,int4,10,,,
+note_nlp,note_nlp_concept_id,int4,10, √ ,,null
+note_nlp,note_nlp_id,int8,19,,,
+note_nlp,note_nlp_source_concept_id,int4,10, √ ,,null
+note_nlp,offset,varchar,250, √ ,,null
+note_nlp,section_concept_id,int4,10, √ ,,null
+note_nlp,snippet,varchar,250, √ ,,null
+note_nlp,term_exists,varchar,1, √ ,,null
+note_nlp,term_modifiers,varchar,2000, √ ,,null
+note_nlp,term_temporal,varchar,50, √ ,,null
+observation,observation_concept_id,int4,10,,,
+observation,observation_date,date,13,,,
+observation,observation_datetime,timestamp,"29,6", √ ,,null
+observation,observation_id,int4,10,,,
+observation,observation_source_concept_id,int4,10, √ ,,null
+observation,observation_source_value,varchar,50, √ ,,null
+observation,observation_type_concept_id,int4,10,,,
+observation,person_id,int4,10,,,
+observation,provider_id,int4,10, √ ,,null
+observation,qualifier_concept_id,int4,10, √ ,,null
+observation,qualifier_source_value,varchar,50, √ ,,null
+observation,unit_concept_id,int4,10, √ ,,null
+observation,unit_source_value,varchar,50, √ ,,null
+observation,value_as_concept_id,int4,10, √ ,,null
+observation,value_as_number,numeric,131089, √ ,,null
+observation,value_as_string,varchar,60, √ ,,null
+observation,visit_detail_id,int4,10, √ ,,null
+observation,visit_occurrence_id,int4,10, √ ,,null
+observation_period,observation_period_end_date,date,13,,,
+observation_period,observation_period_end_datetime,timestamp,"29,6",,,
+observation_period,observation_period_id,int4,10,,,
+observation_period,observation_period_start_date,date,13,,,
+observation_period,observation_period_start_datetime,timestamp,"29,6",,,
+observation_period,period_type_concept_id,int4,10,,,
+observation_period,person_id,int4,10,,,
+payer_plan_period,family_source_value,varchar,50, √ ,,null
+payer_plan_period,payer_plan_period_end_date,date,13,,,
+payer_plan_period,payer_plan_period_id,int4,10,,,
+payer_plan_period,payer_plan_period_start_date,date,13,,,
+payer_plan_period,payer_source_value,varchar,50, √ ,,null
+payer_plan_period,person_id,int4,10,,,
+payer_plan_period,plan_source_value,varchar,50, √ ,,null
+person,birth_datetime,timestamp,"29,6", √ ,,null
+person,care_site_id,int4,10, √ ,,null
+person,day_of_birth,int4,10, √ ,,null
+person,ethnicity_concept_id,int4,10,,,
+person,ethnicity_source_concept_id,int4,10, √ ,,null
+person,ethnicity_source_value,varchar,50, √ ,,null
+person,gender_concept_id,int4,10,,,
+person,gender_source_concept_id,int4,10, √ ,,null
+person,gender_source_value,varchar,50, √ ,,null
+person,location_id,int4,10, √ ,,null
+person,month_of_birth,int4,10, √ ,,null
+person,person_id,int4,10,,,
+person,person_source_value,varchar,50, √ ,,null
+person,provider_id,int4,10, √ ,,null
+person,race_concept_id,int4,10,,,
+person,race_source_concept_id,int4,10, √ ,,null
+person,race_source_value,varchar,50, √ ,,null
+person,year_of_birth,int4,10,,,
+procedure_occurrence,modifier_concept_id,int4,10, √ ,,null
+procedure_occurrence,person_id,int4,10,,,
+procedure_occurrence,procedure_concept_id,int4,10,,,
+procedure_occurrence,procedure_date,date,13,,,
+procedure_occurrence,procedure_datetime,timestamp,"29,6",,,
+procedure_occurrence,procedure_occurrence_id,int4,10,,,
+procedure_occurrence,procedure_source_concept_id,int4,10, √ ,,null
+procedure_occurrence,procedure_source_value,varchar,50, √ ,,null
+procedure_occurrence,procedure_type_concept_id,int4,10,,,
+procedure_occurrence,provider_id,int4,10, √ ,,null
+procedure_occurrence,qualifier_source_value,varchar,50, √ ,,null
+procedure_occurrence,quantity,int4,10, √ ,,null
+procedure_occurrence,visit_detail_id,int4,10, √ ,,null
+procedure_occurrence,visit_occurrence_id,int4,10, √ ,,null
+provider,care_site_id,int4,10, √ ,,null
+provider,dea,varchar,20, √ ,,null
+provider,gender_concept_id,int4,10, √ ,,null
+provider,gender_source_concept_id,int4,10, √ ,,null
+provider,gender_source_value,varchar,50, √ ,,null
+provider,npi,varchar,20, √ ,,null
+provider,provider_id,int4,10,,,
+provider,provider_name,varchar,255, √ ,,null
+provider,provider_source_value,varchar,50, √ ,,null
+provider,specialty_concept_id,int4,10, √ ,,null
+provider,specialty_source_concept_id,int4,10, √ ,,null
+provider,specialty_source_value,varchar,50, √ ,,null
+provider,year_of_birth,int4,10, √ ,,null
+relationship,defines_ancestry,varchar,1,,,
+relationship,is_hierarchical,varchar,1,,,
+relationship,relationship_concept_id,int4,10,,,
+relationship,relationship_id,varchar,20,,,
+relationship,relationship_name,varchar,255,,,
+relationship,reverse_relationship_id,varchar,20,,,
+source_to_concept_map,invalid_reason,varchar,1, √ ,,null
+source_to_concept_map,source_code,varchar,50,,,
+source_to_concept_map,source_code_description,varchar,255, √ ,,null
+source_to_concept_map,source_concept_id,int4,10,,,
+source_to_concept_map,source_vocabulary_id,varchar,20,,,
+source_to_concept_map,target_concept_id,int4,10,,,
+source_to_concept_map,target_vocabulary_id,varchar,20,,,
+source_to_concept_map,valid_end_date,date,13,,,
+source_to_concept_map,valid_start_date,date,13,,,
+specimen,anatomic_site_concept_id,int4,10, √ ,,null
+specimen,anatomic_site_source_value,varchar,50, √ ,,null
+specimen,disease_status_concept_id,int4,10, √ ,,null
+specimen,disease_status_source_value,varchar,50, √ ,,null
+specimen,person_id,int4,10,,,
+specimen,quantity,numeric,131089, √ ,,null
+specimen,specimen_concept_id,int4,10,,,
+specimen,specimen_date,date,13,,,
+specimen,specimen_datetime,timestamp,"29,6", √ ,,null
+specimen,specimen_id,int4,10,,,
+specimen,specimen_source_id,varchar,50, √ ,,null
+specimen,specimen_source_value,varchar,50, √ ,,null
+specimen,specimen_type_concept_id,int4,10,,,
+specimen,unit_concept_id,int4,10, √ ,,null
+specimen,unit_source_value,varchar,50, √ ,,null
+visit_detail,admitting_source_concept_id,int4,10, √ ,,null
+visit_detail,admitting_source_value,varchar,50, √ ,,null
+visit_detail,care_site_id,int4,10, √ ,,null
+visit_detail,discharge_to_concept_id,int4,10, √ ,,null
+visit_detail,discharge_to_source_value,varchar,50, √ ,,null
+visit_detail,person_id,int4,10,,,
+visit_detail,preceding_visit_detail_id,int4,10, √ ,,null
+visit_detail,provider_id,int4,10, √ ,,null
+visit_detail,visit_detail_concept_id,int4,10,,,
+visit_detail,visit_detail_id,int4,10,,,
+visit_detail,visit_detail_parent_id,int4,10, √ ,,null
+visit_detail,visit_end_date,date,13,,,
+visit_detail,visit_end_datetime,timestamp,"29,6", √ ,,null
+visit_detail,visit_occurrence_id,int4,10, √ ,,null
+visit_detail,visit_source_concept_id,int4,10, √ ,,null
+visit_detail,visit_source_value,varchar,50, √ ,,null
+visit_detail,visit_start_date,date,13,,,
+visit_detail,visit_start_datetime,timestamp,"29,6", √ ,,null
+visit_detail,visit_type_concept_id,int4,10,,,
+visit_occurrence,admitting_source_concept_id,int4,10, √ ,,null
+visit_occurrence,admitting_source_value,varchar,50, √ ,,null
+visit_occurrence,care_site_id,int4,10, √ ,,null
+visit_occurrence,discharge_to_concept_id,int4,10, √ ,,null
+visit_occurrence,discharge_to_source_value,varchar,50, √ ,,null
+visit_occurrence,person_id,int4,10,,,
+visit_occurrence,preceding_visit_occurrence_id,int4,10, √ ,,null
+visit_occurrence,provider_id,int4,10, √ ,,null
+visit_occurrence,visit_concept_id,int4,10,,,
+visit_occurrence,visit_end_date,date,13,,,
+visit_occurrence,visit_end_datetime,timestamp,"29,6", √ ,,null
+visit_occurrence,visit_occurrence_id,int4,10,,,
+visit_occurrence,visit_source_concept_id,int4,10, √ ,,null
+visit_occurrence,visit_source_value,varchar,50, √ ,,null
+visit_occurrence,visit_start_date,date,13,,,
+visit_occurrence,visit_start_datetime,timestamp,"29,6", √ ,,null
+visit_occurrence,visit_type_concept_id,int4,10,,,
+vocabulary,vocabulary_concept_id,int4,10,,,
+vocabulary,vocabulary_id,varchar,20,,,
+vocabulary,vocabulary_name,varchar,255,,,
+vocabulary,vocabulary_reference,varchar,255, √ ,,null
+vocabulary,vocabulary_version,varchar,255, √ ,,null
