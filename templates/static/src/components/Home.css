@@ -1,0 +1,17 @@
+.portfolio-grid figure {
+    position: relative;
+    float: left;
+    overflow: hidden;
+    width: 100%;
+    background: #934a9d;
+    text-align: center;
+    cursor: pointer;
+
+}
+
+
+.portfolio-grid  {
+    margin-right: 15px !important;
+
+}
+

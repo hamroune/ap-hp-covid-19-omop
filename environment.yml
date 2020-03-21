@@ -6,3 +6,4 @@ dependencies:
       - bs4
       - requests
       - pandas
+      - Flask
