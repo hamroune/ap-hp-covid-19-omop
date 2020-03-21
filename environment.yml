@@ -1,0 +1,6 @@
+name: omop-schema-viz
+dependencies:
+  - python=3.7
+  - pip:
+      - lxml
+      - bs4
