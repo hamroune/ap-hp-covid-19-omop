@@ -47,7 +47,7 @@ def generate_csv(output_path_csv: str):
 
     df.to_csv(output_path_csv, index=False)
 
-def generate_csv_from_schema(out_path_csv: str):
+def generate_json_from_schema(out_path_csv: str):
     PAGE_URL = 'https://mit-lcp.github.io/mimic-omop/schemaspy-omop/postgres.omop.xml'
     page = requests.get(PAGE_URL)
     soup: BeautifulSoup = BeautifulSoup(page.content, 'lxml')
@@ -61,5 +61,7 @@ def generate_csv_from_schema(out_path_csv: str):
 
     df = pd.DataFrame.from_dict(columns)
     print(df.head())
-    df.to_csv(out_path_csv, index=False)
+
+    df.drop_duplicates(["table", "col_name"], keep='last', inplace=True)
+    df.to_json(out_path_csv, orient='records')
 

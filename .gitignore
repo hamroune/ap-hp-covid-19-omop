@@ -6,5 +6,6 @@ omop/__cache__/
 omop-schema-viz/omop-schema-viz/build/
 
 templates/static/node_modules/
+templates/static/build/
 .DS_Store
 ./.DS_Store
